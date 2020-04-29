@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pattern_unlock/pattern_unlock.dart';
+import 'package:pattern_password/pattern_password.dart';
 
 void main() => runApp(MyApp());
 

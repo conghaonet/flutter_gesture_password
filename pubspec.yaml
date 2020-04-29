@@ -1,5 +1,5 @@
-name: pattern_unlock
-description: a flutter gesture password
+name: pattern_password
+description: a flutter pattern password
 version: 0.0.1
 author:
 homepage:

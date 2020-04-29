@@ -102,7 +102,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.6.4"
-  pattern_unlock:
+  pattern_password:
     dependency: "direct main"
     description:
       path: ".."
