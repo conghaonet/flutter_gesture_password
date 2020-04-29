@@ -10,7 +10,7 @@ class MiniGesturePassword extends StatefulWidget {
 
   MiniGesturePassword(
       {Key key,
-        this.attribute: MiniItemAttribute.normalAttribute,
+        this.attribute: const MiniItemAttribute(),
         this.height: 60.0})
       : super(key: key);
 
@@ -60,13 +60,9 @@ class MiniItemAttribute {
   final Color selectedColor;
   final Color normalColor;
   final double smallCircleR;
-  static const MiniItemAttribute normalAttribute = const MiniItemAttribute(
-      normalColor: const Color(0xFFBBDEFB),
-      selectedColor: const Color(0xFF1565C0));
-
   const MiniItemAttribute({
-    this.normalColor,
-    this.selectedColor,
+    this.normalColor = Colors.grey,
+    this.selectedColor = Colors.blue,
     this.smallCircleR: 6.0,
   });
 }
