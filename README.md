@@ -1,6 +1,6 @@
-# flutter gesture password
+# flutter pattern unlock
 
-a flutter gesture password
+a flutter pattern unlock
 
 ## Getting Started
 
