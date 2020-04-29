@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gesture_password/flutter_gesture_password.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Flutter Demo',
-      theme: new ThemeData(
+    return MaterialApp(
+      title: 'Gesture password demo',
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -22,76 +22,46 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   GlobalKey<MiniGesturePasswordState> miniGesturePassword =
-  new GlobalKey<MiniGesturePasswordState>();
+  GlobalKey<MiniGesturePasswordState>();
 
-  GlobalKey<ScaffoldState> scaffoldState = new GlobalKey<ScaffoldState>();
+  GlobalKey<ScaffoldState> scaffoldState = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
+    return MaterialApp(
+      home: Scaffold(
         key: scaffoldState,
-        appBar: new AppBar(
-          title: new Text('Plugin example app'),
+        appBar: AppBar(
+          title: Text('Gesture password demo'),
         ),
-        body: new Column(
+        body: Column(
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Center(
-              child: new MiniGesturePassword(key: miniGesturePassword),
+              child: MiniGesturePassword(key: miniGesturePassword),
             ),
             GesturePassword(
-              width: 300,
-              height: 300,
               successCallback: (s) {
                 print("successCallback$s");
-                scaffoldState.currentState?.showSnackBar(new SnackBar(
-                    content: new Text('successCallback:$s')));
+                scaffoldState.currentState?.showSnackBar(SnackBar(
+                    content: Text('successCallback:$s')));
                 miniGesturePassword.currentState?.setSelected('');
               },
               failCallback: () {
                 print('failCallback');
                 scaffoldState.currentState?.showSnackBar(
-                    new SnackBar(content: new Text('failCallback')));
+                    SnackBar(content: Text('failCallback')));
                 miniGesturePassword.currentState?.setSelected('');
               },
               selectedCallback: (str) {
                 miniGesturePassword.currentState?.setSelected(str);
               },
             )
-/*
-            new LayoutBuilder(
-              builder: (BuildContext context, BoxConstraints constraints) {
-                return new Container(
-//                  color: Colors.red,
-//                  margin: const EdgeInsets.only(top: 100.0),
-                  child: new GesturePassword(
-                    width: 300,
-                    height: 300,
-                    successCallback: (s) {
-                      print("successCallback$s");
-                      scaffoldState.currentState?.showSnackBar(new SnackBar(
-                          content: new Text('successCallback:$s')));
-                      miniGesturePassword.currentState?.setSelected('');
-                    },
-                    failCallback: () {
-                      print('failCallback');
-                      scaffoldState.currentState?.showSnackBar(
-                          new SnackBar(content: new Text('failCallback')));
-                      miniGesturePassword.currentState?.setSelected('');
-                    },
-                    selectedCallback: (str) {
-                      miniGesturePassword.currentState?.setSelected(str);
-                    },
-                  ),
-                );
-              },
-            ),
-*/
           ],
         ),
       ),
