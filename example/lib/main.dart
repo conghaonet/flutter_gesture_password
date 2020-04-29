@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gesture_password/flutter_gesture_password.dart';
+import 'package:pattern_unlock/pattern_unlock.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gesture password demo',
+      title: 'Pattern unlock demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       home: Scaffold(
         key: scaffoldState,
         appBar: AppBar(
-          title: Text('Gesture password demo'),
+          title: Text('Pattern unlock demo'),
         ),
         body: Column(
           mainAxisSize: MainAxisSize.min,

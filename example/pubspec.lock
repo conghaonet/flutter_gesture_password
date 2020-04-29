@@ -69,13 +69,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_gesture_password:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -109,6 +102,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.6.4"
+  pattern_unlock:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
   pedantic:
     dependency: transitive
     description:
