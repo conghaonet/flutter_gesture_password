@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'circle.dart';
-import 'mini_gesture_password.dart';
+import 'mini_pattern_password.dart';
 
 class MiniCircleView extends CustomPainter {
   MiniCircleView(this.itemAttribute, this.circleList, this.selectedStr);

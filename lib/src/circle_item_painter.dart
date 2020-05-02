@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'circle.dart';
-import 'gesture_password.dart';
+import 'gesture_pattern_password.dart';
 
 class CircleItemPainter extends CustomPainter {
   CircleItemPainter(

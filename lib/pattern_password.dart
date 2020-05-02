@@ -1,4 +1,4 @@
 library pattern_password;
 
-export 'src/gesture_password.dart';
-export 'src/mini_gesture_password.dart';
+export 'src/gesture_pattern_password.dart';
+export 'src/mini_pattern_password.dart';
