@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'circle.dart';
 import 'circle_item_painter.dart';
 
-class GesturePassword extends StatefulWidget {
+class GesturePatternPassword extends StatefulWidget {
   final ValueChanged<String> successCallback;
   final ValueChanged<String> selectedCallback;
   final VoidCallback failCallback;
@@ -14,7 +14,7 @@ class GesturePassword extends StatefulWidget {
   final double height;
   final double width;
 
-  GesturePassword(
+  GesturePatternPassword(
       {@required this.successCallback,
         this.failCallback,
         this.selectedCallback,
@@ -24,10 +24,10 @@ class GesturePassword extends StatefulWidget {
       });
 
   @override
-  _GesturePasswordState createState() => new _GesturePasswordState();
+  _GesturePatternPasswordState createState() => new _GesturePatternPasswordState();
 }
 
-class _GesturePasswordState extends State<GesturePassword> {
+class _GesturePatternPasswordState extends State<GesturePatternPassword> {
   Offset touchPoint = Offset.zero;
   List<Circle> circleList = new List<Circle>();
   List<Circle> lineList = new List<Circle>();

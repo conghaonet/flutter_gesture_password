@@ -4,21 +4,21 @@ import 'package:flutter/widgets.dart';
 import 'circle.dart';
 import 'mini_circle_view.dart';
 
-class MiniGesturePassword extends StatefulWidget {
+class MiniPatternPassword extends StatefulWidget {
   final MiniItemAttribute attribute;
   final double height;
 
-  MiniGesturePassword(
+  MiniPatternPassword(
       {Key key,
         this.attribute: const MiniItemAttribute(),
         this.height: 60.0})
       : super(key: key);
 
   @override
-  MiniGesturePasswordState createState() => new MiniGesturePasswordState();
+  MiniPatternPasswordState createState() => new MiniPatternPasswordState();
 }
 
-class MiniGesturePasswordState extends State<MiniGesturePassword> {
+class MiniPatternPasswordState extends State<MiniPatternPassword> {
   Offset touchPoint = Offset.zero;
   List<Circle> circleList = new List<Circle>();
   String selectedStr = '';

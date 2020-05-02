@@ -26,7 +26,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  GlobalKey<MiniGesturePasswordState> miniGesturePassword = GlobalKey<MiniGesturePasswordState>();
+  GlobalKey<MiniPatternPasswordState> miniGesturePassword = GlobalKey<MiniPatternPasswordState>();
 
   GlobalKey<ScaffoldState> scaffoldState = GlobalKey<ScaffoldState>();
 
@@ -42,9 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Center(
-              child: MiniGesturePassword(key: miniGesturePassword),
+              child: MiniPatternPassword(key: miniGesturePassword),
             ),
-            GesturePassword(
+            GesturePatternPassword(
               successCallback: (s) {
                 print("successCallback$s");
                 scaffoldState.currentState?.showSnackBar(SnackBar(content: Text('successCallback:$s')));
